@@ -1,0 +1,56 @@
+
+body {
+    margin: 0;
+}
+
+.box {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 120px;
+    background-color: #ddd;
+}
+
+.main {
+    /*background-color: #f00;*/
+    overflow: hidden;
+}
+
+.main .left {
+    width: 65%;
+    overflow: hidden;
+    float: left;
+    padding: 1%;
+    border-radius: 3px;
+}
+
+.main .left .show {
+
+}
+
+.main .right {
+    width: 33%;
+    overflow: hidden;
+    float: right;
+}
+
+.main .right .send {
+    margin: 10px;
+    padding: 20px 1.1% 10px;
+    border-radius: 5px;
+    background-color: #dcecf4;
+    position: fixed;
+    z-index: 1;
+}
+
+.footer {
+    height: 80px;
+    background-color: #ddd;
+}
+
+#subBtn {
+    left: 20px;
+}
+
