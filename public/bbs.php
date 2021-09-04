@@ -50,8 +50,6 @@ $select_sth->execute();
 </head>
 <body>
 <div class="box">
-
-
     <div class="header"></div>
     <div class="main">
         <div class="left">
@@ -64,7 +62,7 @@ $select_sth->execute();
                         <dd><?= $entry['created_at'] ?></dd>
                         <dt>内容</dt>
                         <dd>
-                            <?= nl2br(htmlspecialchars($entry['body'])) // 必ず htmlspecialchars() すること       ?>
+                            <?= nl2br(htmlspecialchars($entry['body'])) // 必ず htmlspecialchars() すること                    ?>
                             <?php if (!empty($entry['image_filename'])): ?>
                                 <div>
                                     <img src="/image/<?= $entry['image_filename'] ?>" style="max-height: 10em;">
@@ -79,11 +77,13 @@ $select_sth->execute();
             <div class="send">
                 <!-- フォームのPOST先はこのファイル自身にする -->
                 <form method="POST" action="./bbs.php" enctype="multipart/form-data">
-                    <textarea name="body" cols="40" rows="10"></textarea>
+                    <textarea id="body" name="body" cols="40" rows="10"></textarea>
                     <div style="margin: 1em 0;">
                         <input type="file" accept="image/*" name="image" id="imageInput">
+                        <!--                        <input type="file" accept="image/*" id="picFile" onchange="readFile(this)"/>-->
+                        <br>
+                        <!--                        <img style="" id="img" src="" alt=""/>-->
                     </div>
-                    <img src="" id="img" alt="">
                     <button id="subBtn" type="submit">送信</button>
                 </form>
             </div>
@@ -95,7 +95,6 @@ $select_sth->execute();
 </div>
 </body>
 <hr>
-
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         const imageInput = document.getElementById("imageInput");
