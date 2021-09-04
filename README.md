@@ -14,7 +14,7 @@
 
 まずソースコードの設置を行います。
 
-この掲示板サービスのソースコードはGitHub上で公開しているリポジトリ `wumoye/sys_development_php` ディレクトリ内にあります。
+この掲示板サービスのソースコードはGitHub上で公開しているリポジトリ `wumoye/sys_development_php` にあります。
 
 ```sh
 git clone github.com/wumoye/sys_development_php.git
